@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    android:background="@android:color/white"
+    android:orientation="vertical">
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:weightSum="25"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_weight="6"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="2dp"
+        android:layout_marginRight="2dp"
+
+        android:background="@drawable/customborder"
+        >
+
+        <TextView
+            android:text="Total Distance (Km)"
+            android:textSize="15sp"
+            android:textStyle="bold"
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/customborder1"
+            android:layout_gravity="center_horizontal" />
+
+        <TextView
+            android:id="@+id/distancetext"
+            android:layout_width="fill_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:singleLine="true"
+            android:text="0.0"
+            android:textSize="50sp"
+            android:textStyle="bold"
+            android:textColor="#000"
+
+            android:layout_gravity="center_horizontal"
+            />
+    </LinearLayout>
+
+
+<LinearLayout
+    android:layout_width="fill_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center"
+    android:orientation="horizontal"
+    android:layout_marginTop="10dp"
+    android:layout_marginLeft="2dp"
+    android:layout_marginRight="2dp"
+
+
+
+    android:layout_weight="6"
+    android:weightSum="2"
+
+
+    >
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_marginRight="5dp"
+        android:layout_weight="0.6"
+
+        android:background="@drawable/customborder"
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="Speed (Km/h)"
+            android:background="@drawable/customborder1"
+            android:textStyle="bold"
+
+            android:textSize="15sp"
+
+            android:layout_gravity="center_horizontal"
+            />
+        <TextView
+            android:id="@+id/speedtext"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:text="0.0"
+            android:textStyle="bold"
+            android:textColor="#000"
+
+            android:textSize="50sp"
+            android:gravity="center"
+            android:layout_gravity="center_horizontal"
+            />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_marginLeft="5dp"
+
+        android:layout_weight="1.4"
+
+        android:background="@drawable/customborder"
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Time"
+            android:textStyle="bold"
+
+            android:background="@drawable/customborder1"
+            android:textSize="15sp"
+            android:layout_gravity="center_horizontal"
+            />
+        <TextView
+            android:id="@+id/timetext"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:text="0:0"
+            android:textColor="#000"
+
+            android:textSize="50sp"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:layout_gravity="center_horizontal"
+
+
+            />
+
+    </LinearLayout>
+
+</LinearLayout>
+
+    <LinearLayout
+        android:layout_weight="6"
+        android:layout_width="fill_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="2dp"
+        android:layout_marginRight="2dp"
+        android:background="@drawable/customborder"
+        >
+
+      <TextView
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:text="Average Speed (Km/h)"
+          android:gravity="center"
+          android:textSize="15sp"
+          android:textStyle="bold"
+          android:layout_gravity="center_horizontal"
+          android:background="@drawable/customborder1"
+          />
+
+       <TextView
+           android:id="@+id/averagespeed"
+           android:layout_width="fill_parent"
+           android:layout_height="fill_parent"
+           android:text="0.0"
+           android:gravity="center"
+           android:textStyle="bold"
+           android:textColor="#000"
+           android:textSize="50sp"
+           android:layout_gravity="center_horizontal"
+           />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="bottom"
+        android:orientation="horizontal"
+        android:layout_weight="7"
+
+
+        >
+
+        <Button
+            android:id="@+id/start"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="bottom"
+            android:background="@android:color/white"
+            android:paddingBottom="0dp"
+            android:text="Start Calculating" />
+
+        <Button
+            android:id="@+id/pause"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="left"
+            android:layout_weight="7"
+            android:background="@android:color/white"
+            android:textColor="#ff33b5e5"
+
+            android:text="Pause"
+
+            android:visibility="gone" />
+
+        <Button
+            android:id="@+id/stop"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="right"
+            android:layout_marginLeft="2dp"
+            android:layout_weight="7"
+            android:background="@android:color/white"
+            android:textColor="#ffcc0000"
+            android:text="Stop"
+            android:visibility="gone" />
+    </LinearLayout>
+
+
+</LinearLayout>
+
+
+
+</FrameLayout>
